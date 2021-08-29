@@ -42,13 +42,7 @@ testem.log
 
 # System Files
 .DS_Store
-Thumbs.db
+Thumbs.debug
 
-
-
-export const environment = {
-  production: false
-  apiUrl:"http://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"
-};
-
-environment.ts
+#githubweb
+src/environment.ts
