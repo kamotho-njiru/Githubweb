@@ -5,6 +5,16 @@ import { Directive } from '@angular/core';
 })
 export class HoverDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) { }
+  @HostListener("mouseenter") onMouseEnter(){
+    this.textDeco("underLine")
+  }
 
+  @HostListener("mouseleave") onMouseLeave(){
+    this.textDeco("none")
+  }
+
+  private textDeco(action:string){
+    this.elem.nativeElement.style.textDecoration=action;
+  }
 }
